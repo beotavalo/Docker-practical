@@ -69,15 +69,15 @@ Practical guide with Docker.
     docker pull postgres
     ```
 
-## Paso 3: Lanzar un Contenedor de PostgreSQL en el Puerto 3032
+## Paso 3: Lanzar un Contenedor de PostgreSQL en el Puerto 5432
 
-1. **Ejecutar el contenedor de PostgreSQL en el puerto 3032:**
+1. **Ejecutar el contenedor de PostgreSQL en el puerto 5432:**
 
     ```sh
-    docker run --name my_postgres -e POSTGRES_PASSWORD=mysecretpassword -p 3032:5432 -d postgres
+    docker run --name postgresdb -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
     ```
 
-    - `--name my_postgres`: Nombre del contenedor.
+    - `--name my_postgres`:postgresdb #Nombre del contenedor.
     - `-e POSTGRES_PASSWORD=mysecretpassword`: Establece la contraseña del usuario `postgres`.
     - `-p 3032:5432`: Mapea el puerto 3032 del host al puerto 5432 del contenedor.
     - `-d`: Ejecuta el contenedor en segundo plano (detached mode).
